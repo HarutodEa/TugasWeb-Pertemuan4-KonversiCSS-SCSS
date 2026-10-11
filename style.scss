@@ -1,0 +1,267 @@
+/* --- RESET & VARIABEL TEMA GELAP --- */
+:root {
+    --bg-dark: #0f172a;        /* Warna latar belakang utama (Navy sangat gelap) */
+    --bg-card: rgba(30, 41, 59, 0.7); /* Background kartu transparan */
+    --accent: #00f2fe;         /* Warna aksen Neon Cyan */
+    --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    --text-main: #94a3b8;      /* Teks paragraf (Abu-abu terang) */
+    --text-light: #f8fafc;     /* Teks judul (Putih) */
+    --border-glow: rgba(0, 242, 254, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    /* Latar belakang dengan aksen cahaya radial yang unik */
+    background-image: radial-gradient(circle at top right, #1e293b 0%, transparent 40%),
+                      radial-gradient(circle at bottom left, #1e293b 0%, transparent 40%);
+    color: var(--text-main);
+    line-height: 1.7;
+    min-height: 100vh;
+}
+
+/* --- HEADER & NAVIGASI --- */
+header {
+    padding: 4rem 1rem 6rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    /* Efek teks gradasi modern */
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px rgba(0, 242, 254, 0.3);
+}
+
+header p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+}
+
+/* Memperbaiki struktur tabel menu agar menjadi tombol neon */
+header table {
+    margin: 0 auto;
+    border: none;
+    background: transparent;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+header td, header tr {
+    border: none !important;
+}
+
+header a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--accent);
+    padding: 0.6rem 1.5rem;
+    border: 1px solid var(--accent);
+    border-radius: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 242, 254, 0);
+}
+
+header a:hover {
+    background: var(--accent-gradient);
+    color: var(--bg-dark);
+    box-shadow: 0 0 20px rgba(0, 242, 254, 0.5);
+    transform: translateY(-3px);
+}
+
+/* --- KONTEN UTAMA & EFEK GLASSMORPHISM --- */
+main {
+    max-width: 800px;
+    margin: -3rem auto 2rem auto; /* Overlap ke header */
+    padding: 0 1.5rem;
+    position: relative;
+    z-index: 10;
+}
+
+section {
+    background: var(--bg-card);
+    backdrop-filter: blur(12px); /* Efek kaca */
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    margin-bottom: 2.5rem;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+section:hover {
+    border-color: var(--border-glow);
+    transform: translateY(-5px);
+}
+
+section h2 {
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    display: inline-block;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent-gradient);
+    border-radius: 5px;
+}
+
+/* --- TENTANG SAYA & FOTO --- */
+figure {
+    margin: 1.5rem 0 2.5rem 0;
+    text-align: center;
+}
+
+/* Animasi mengambang untuk foto */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+figure img {
+    border-radius: 20px;
+    border: 2px solid var(--accent);
+    box-shadow: 0 10px 25px rgba(0, 242, 254, 0.2);
+    object-fit: cover;
+    animation: float 4s ease-in-out infinite;
+}
+
+figcaption {
+    font-size: 0.85rem;
+    color: var(--text-main);
+    margin-top: 1rem;
+    opacity: 0.7;
+}
+
+article p {
+    margin-bottom: 1.2rem;
+    text-align: justify;
+}
+
+aside {
+    background: rgba(0, 242, 254, 0.05);
+    border-left: 4px solid var(--accent);
+    padding: 1.2rem;
+    border-radius: 0 12px 12px 0;
+    margin-top: 2rem;
+}
+
+aside p {
+    color: var(--text-light);
+    font-style: italic;
+}
+
+/* --- FORM KONTAK (GELAP & NEON) --- */
+form p {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    display: block;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"] {
+    width: 100%;
+    padding: 0.9rem 1.2rem;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: var(--text-light);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Ikon kalender putih agar terlihat di dark mode */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+input[type="color"] {
+    width: 100px;
+    height: 45px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 2px;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
+    background: rgba(15, 23, 42, 0.9);
+}
+
+button[type="submit"] {
+    background: var(--accent-gradient);
+    color: #0f172a;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-shadow: 0 5px 15px rgba(0, 242, 254, 0.3);
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 242, 254, 0.5);
+}
+
+/* --- FOOTER --- */
+footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 3rem 1rem;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+footer time {
+    color: var(--accent);
+    font-weight: bold;
+}

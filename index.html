@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Zidane - Web Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Landing page pribadi milik Zidane.">
+    <meta property="og:title" content="Profil Zidane">
+    <meta property="og:description" content="Kunjungi landing page pribadi saya untuk melihat portofolio saya.">
+    <meta property="og:type" content="website">
+</head>
+<body>
+    <header id="beranda">
+        <h1 align="center">Halo, Saya Muhammad Zidane Ariefani</h1>
+        <p align="center">Mahasiswa Ilmu Komputer UNIMED</p>
+        <table border="1"><ul>
+            <tr><li><a href="#tentang">Tentang Saya</a></li></tr>
+            <tr><li><a href="#kontak">Hubungi Saya</a></li></tr>
+        </ul></table>
+    </header>
+    <main>
+        <section id="tentang">
+            <h2 align="center">Profil Saya</h2>
+            <center>
+             <figure>
+                <img src="1.jpeg" alt="Muka gw" width="200px" height="300px">
+                <figcaption>Foto Saya.</figcaption>
+            </figure>
+            </center>
+            <article>
+                <h3>Tentang Saya</h3>
+                <p>Saya Muhammad Zidane Ariefani, Saya adalah Mahasiswa UNIMED dari Prodi Ilmu Komputer.</p>
+                <p>Hobi saya adalah menggambar, membaca, dan menonton anime.</p>
+                <p>Saya menyukai dan tertarik tentang coding karena saya mengambil jurusan Rekayasa Perangkat Lunak saat saya SMK, dan saya merasa sangat tertarik akan itu.</p>
+            </article>
+            
+            <aside>
+                <p><em>Fakta unik: Saya sangat ahli saat membahas anime.</em></p>
+            </aside>
+        </section>
+
+        <section id="kontak">
+            <h2>Hubungi Saya</h2>
+            <form action="#" method="POST">
+                <p>
+                    <label for="nama">Nama Lengkap:</label><br>
+                    <input type="text" id="nama" name="nama" required>
+                </p>
+                <p>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required>
+                </p>
+                <p>
+                    <label for="tanggal_janji">Pilih Tanggal Meeting:</label><br>
+                    <input type="date" id="tanggal_janji" name="tanggal_janji">
+                </p>
+                <p>
+                    <label for="warna_tema">Pilih Warna Favoritmu:</label><br>
+                    <input type="color" id="warna_tema" name="warna_tema" value="#3866E5">
+                </p>
+                
+                <p>
+                    <button type="submit">Kirim Pesan</button>
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p align="center">&copy; 2026 Muhammad Zidane Ariefani.</p>
+        <p align="center">Halaman ini terakhir diperbarui pada <time datetime="2026-08-23">23 Agustus 2026</time>.</p>
+    </footer>
+
+</body>
+</html>
